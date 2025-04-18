@@ -51,7 +51,6 @@ public class FetchData {
 
             if (responseCode == HttpURLConnection.HTTP_OK) {
                 try (
-//                        BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(new FileOutputStream(FILE_NAME, true)));
                         FileWriter fileWriter = new FileWriter(createFileDirectory());
                         BufferedWriter writer = new BufferedWriter(fileWriter);
                         BufferedReader reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
@@ -62,7 +61,6 @@ public class FetchData {
                     while ((line = reader.readLine()) != null) {
                         response.append(line);
                     }
-//                    System.out.println(response.toString());
                     GithubEvents[] events = gson.fromJson(response.toString(),GithubEvents[].class);
                     event = Arrays.asList(events);
                     System.out.println("Current working directory : " + System.getProperty("user.dir"));
