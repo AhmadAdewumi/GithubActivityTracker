@@ -30,7 +30,7 @@ Make sure you have the following installed:
 ### Clone the repository
 https://github.com/AhmadAdewumi/GithubActivityTracker.git
 
-### CAn also fond the project here
+### Can also find the project here
 https://roadmap.sh/projects/github-user-activity
 
 
